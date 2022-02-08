@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /*
     man ska kunna:
            ange namn
@@ -9,12 +6,12 @@ import java.util.List;
            decrease health
  */
 
-public class Person {
+public class Player {
     private String name;
     private int health;
     //private List<String> inventory;
 
-    public Person(String name) {
+    public Player(String name) {
         this.name = name;
         this.health = 100;
     }
