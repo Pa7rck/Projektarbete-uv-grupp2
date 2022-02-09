@@ -1,3 +1,6 @@
+.gitignore
+Player.java
+Main.java
 /target/
 
 ## Java
