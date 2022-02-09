@@ -2,21 +2,14 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Events {
-<<<<<<< HEAD
     private static int random;
     private static int choice;
-=======
-    public static void bearAttack() {
-        private int random;
-        private int choice;
->>>>>>> 81ea613214a0b4d0b445f6c99296e6366a950d72
 
     public static void eventBearAttack(Scanner scanner) {
 
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
-<<<<<<< HEAD
             while (true) {
                 choice = Integer.parseInt(scanner.nextLine());
                 if (choice == 1) {
@@ -42,29 +35,9 @@ public class Events {
                                 "You manage to hide behind a rock, and the bear doesn't notice you. It walks away and you're once again safe.");
                         break;
                     }
-=======
-            choice = scanner.nextInt();
-            if (choice == 1) {
-                random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
-                if (random == 1){
-                    System.out.println("The bear gets scared and runs away. You get away safely.");
->>>>>>> 81ea613214a0b4d0b445f6c99296e6366a950d72
                 } else {
                     System.err.println("\nInvalid choice.\n\n1. Try to scare the bear.\n2. Try to hide.");
                 }
-<<<<<<< HEAD
-=======
-            } else if (choice == 2) {
-                random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
-                if (random == 1){
-                    System.out.println("You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose 30 HP.");
-                    Player.takeDamage(30);
-                } else {
-                    System.out.println("You manage to hide behind a rock, and the bear doesn't notice you. It walks away and you're once again safe.");
-                }
-            } else {
-                throw new IOException("Invalid choice.");
->>>>>>> 81ea613214a0b4d0b445f6c99296e6366a950d72
             }
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
@@ -74,7 +47,7 @@ public class Events {
 
     public static void eventFindMushroom() {
         System.out.println("You find a healthy-looking mushroom. You add it to your backpack.");
-        Player.addMushroom();
+        Player.addMushrooms(1);
     }
 
     public static void eventStepOnNail() {
@@ -106,7 +79,7 @@ public class Events {
                         if (Player.getMushroomCount() > 0) {
                             System.out.println(
                                     "It quickly grabs a mushroom from your backpack and runs away. That's too bad...");
-                            Player.removeMushroom();
+                            Player.removeMushrooms(1);
                             break;
                         } else {
                             System.out.println("It quickly gets bored and walks away.");
@@ -115,7 +88,7 @@ public class Events {
                     } else {
                         System.out.println(
                                 "The fox gets scared and runs away, leaving a msuhroom behind. You decided to take it with you.");
-                        Player.addMushroom();
+                        Player.addMushrooms(1);
                         break;
                     }
                 } else if (choice == 2) {
