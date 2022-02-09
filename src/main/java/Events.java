@@ -16,13 +16,13 @@ public class Events {
                 if (random == 1){
                     System.out.println("The bear gets scared and runs away. You get away safely.");
                 } else {
-                    System.out.println("The bear doesn't fear you at all.  It charges you, gets a swing off and runt away.\nYou lose 30 HP.");
+                    System.out.println("The bear doesn't fear you at all.  It charges you, gets a swing off and runs away.\nYou lose 30 HP.");
                     Player.setHP(Player.getHP() - 30);
                 }
             } else if (choice == 2) {
                 random = ThreadLocalRandom.current().nextInt(1, 4);
                 if (random == 1){
-                    System.out.println("You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runt away.\nYou lose 30 HP.");
+                    System.out.println("You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose 30 HP.");
                     Player.setHP(Player.getHP() - 30);
                 } else {
                     System.out.println("You manage to hide behind a rock, and the bear doesn't notice you. It walks away and you're once again safe.");
