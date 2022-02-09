@@ -41,7 +41,7 @@ public class Events {
     }
 
     public static void stepOnNail() {
-        System.out.println("As you walk along the path, you step on an old, rusty nail. You take 5 HP.");
+        System.out.println("As you walk along the path, you step on an old, rusty nail. You lose 5 HP.");
         Player.setHP(Player.getHP() - 5);
     }
 }
