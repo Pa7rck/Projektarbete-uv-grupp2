@@ -10,10 +10,13 @@ public class Main {
 		try (BufferedReader reader = new BufferedReader(new FileReader("Prologue.txt"));
 			 Scanner scanner = new Scanner(System.in)) {
 			String lines;
+
+			// Reads the entire prologue.
 			while ((lines = reader.readLine()) != null) {
 				System.out.println(lines);
 			}
 
+			// The game continues while the player has yet to reach a certain level(or died).
 			int level = 1;
 			while (level < 5) {
 				System.out.println();
