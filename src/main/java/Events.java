@@ -4,8 +4,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Events {
     public static void bearAttack() {
-        int random;
-        int choice;
+        private int random;
+        private int choice;
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("A bear appears from behind a tree, making its way towards you. What do you do?\n");
