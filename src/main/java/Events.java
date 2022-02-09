@@ -12,7 +12,7 @@ public class Events {
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
             choice = scanner.nextInt();
             if (choice == 1) {
-                random = ThreadLocalRandom.current().nextInt(1, 4);
+                random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
                 if (random == 1){
                     System.out.println("The bear gets scared and runs away. You get away safely.");
                 } else {
@@ -20,7 +20,7 @@ public class Events {
                     Player.takeDamage(30);
                 }
             } else if (choice == 2) {
-                random = ThreadLocalRandom.current().nextInt(1, 4);
+                random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
                 if (random == 1){
                     System.out.println("You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose 30 HP.");
                     Player.takeDamage(30);
