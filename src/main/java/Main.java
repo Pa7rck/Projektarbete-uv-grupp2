@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,14 +12,13 @@ public class Main {
 			 Scanner scanner = new Scanner(System.in)) {
 			String lines;
 
-			// Reads the entire prologue.
+			// Prints out the prologue.
 			while ((lines = reader.readLine()) != null) {
 				System.out.println(lines);
 			}
 
-			// The game continues while the player has yet to reach a certain level(or died).
-			int level = 1;
-			while (level < 5) {
+			// To make the game stop after reaching a certain level(or died).
+			while (move.getLevel() < 5) {
 				System.out.println();
 				System.out.println("Which path do you choose?(left/right)");
 				String userChoice = scanner.next();
@@ -28,9 +28,9 @@ public class Main {
 				} else if (userChoice.equals("right")) {
 					move.travelRight();
 				}
-
-				level++;
 			}
+		} catch(FileNotFoundException ex) {
+			System.err.println("The file does not exist");
 		}
 	}
 }
