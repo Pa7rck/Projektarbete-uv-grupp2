@@ -17,6 +17,11 @@ public class Main {
 				System.out.println(lines);
 			}
 
+			System.out.println();
+			System.out.println("What's your name? ");
+			String userName = scanner.next();
+			Player.setName(userName);
+
 			// To make the game stop after reaching a certain level(or died).
 			while (move.getLevel() < 5) {
 				System.out.println();
