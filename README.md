@@ -1,4 +1,4 @@
-Text-baserat äventyr, man följer en stig i skogen och ska hitta sin vän. Rör sig i steg, slumpade event kan hända på vägen.
+Text-baserat äventyr, man följer en stig i skogen och ska hitta sin väg ut. Rör sig i steg, slumpade event kan hända på vägen.
 
 
 
