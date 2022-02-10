@@ -9,7 +9,6 @@
 public class Player {
     private String name;
     private int health;
-    private Events currentEvent;
     //private List<String> inventory;
 
     public Player(String name) {
@@ -21,15 +20,6 @@ public class Player {
         return name;
     }
 
-
-    // Eventet man är i
-    public Events getCurrentEvent() {
-        return currentEvent;
-    }
-
-    public void setCurrentEvent(Events currentEvent) {
-        this.currentEvent = currentEvent;
-    }
 
     // health
     public void increaseHealth(int currentHealth) {
@@ -47,4 +37,5 @@ public class Player {
     public int getHealth() {
         return health;
     }
+
 }
