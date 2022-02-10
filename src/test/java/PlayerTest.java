@@ -1,12 +1,11 @@
-/*
 import org.testng.annotations.Test;
 
-public class PersonTest {
+public class PlayerTest {
+    private Player name;
 
-    @Test
-    public void PersonTest() {
-
+    public void PlayerTest() {
+        Player name = "Gabbi";
     }
 }
 
- */
+
