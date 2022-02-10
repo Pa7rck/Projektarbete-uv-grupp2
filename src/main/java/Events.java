@@ -57,7 +57,7 @@ public class Events {
         System.out.println("Suddenly, a magnificent deer jumps across the path!");
         if (Player.getHP() < 100) {
             System.out.println("The beaufy of the scene fills you with joy, healing you a little.");
-            Player.setHP(10);
+            Player.addHP(10);
         } else {
             System.out.println("It runs away into the forest, and nothing more happens.");
         }
