@@ -1,10 +1,8 @@
-import org.testng.annotations.Test;
-
 public class PlayerTest {
     private Player name;
 
     public void PlayerTest() {
-        Player name = "Gabbi";
+        Player name = new Player("Gabbi");
     }
 }
 

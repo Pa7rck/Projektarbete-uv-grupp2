@@ -7,39 +7,36 @@
  */
 
 public class Player {
-    private String name;
-    private static int health;
+    private static String name;
+    private static int health = 100;
     private static int mushroomCount = 0;
 
-    public Player(String name) {
-        this.name = name;
-        this.health = 100;
+    public static void setName(String name) {
+        Player.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-
     // health
-    public void increaseHealth(int currentHealth) {
+    public static void addHP(int currentHealth) {
         if (currentHealth > 0) {
             health += currentHealth;
         }
-    }
-
-    public void decreaseHealth(int currentHealth) {
-        if (currentHealth < 0) {
-            health -= currentHealth;
+        if (currentHealth > 100) {
+            health = 100;
         }
     }
 
-    public int getHealth() {
+    public static int getHP() {
         return health;
     }
 
     public static void takeDamage(int damage) {
-        health -= damage;
+        if (health > 0) {
+            health -= damage;
+        }
     }
 
     // gets health from mushroom
@@ -53,11 +50,11 @@ public class Player {
         }
     }
 
-    public static void addMushroom(int amount) {
+    public static void addMushrooms(int amount) {
         mushroomCount += amount;
     }
 
-    public static void removeMushroom(int amount) {
+    public static void removeMushrooms(int amount) {
         mushroomCount -= amount;
     }
 
