@@ -18,7 +18,7 @@ public class Main {
 			}
 
 			System.out.println();
-			System.out.println("What's your name? ");
+			System.out.println("Now, what is your name? ");
 			String userName = scanner.next();
 			Player.setName(userName);
 
@@ -29,9 +29,26 @@ public class Main {
 				String userChoice = scanner.next();
 
 				if (userChoice.equals("left")) {
-					move.travelLeft();
+					move.travelLeft(scanner);
 				} else if (userChoice.equals("right")) {
-					move.travelRight();
+					move.travelRight(scanner);
+				}
+
+				if(move.getLevel() == 5) {
+					System.out.print("\n\n\nYou survived the forest!\n\n\n");
+					System.out.print("Credits:\n\n");
+					System.out.println("Andreas");
+					System.out.println("Gabriella");
+					System.out.println("Patrick");
+				}
+
+				if(move.getLevel() < 5) {
+					System.out.println("You're on level " + move.getLevel());
+					System.out.println("HP " + Player.getHP());
+				}
+
+				if(Player.getHP() < 1) {
+					System.out.println("You're dead");
 				}
 			}
 		} catch(FileNotFoundException ex) {
