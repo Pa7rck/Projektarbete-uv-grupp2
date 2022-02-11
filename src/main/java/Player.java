@@ -15,16 +15,14 @@ public class Player {
         Player.name = name;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
     // health
-    public static void addHP(int currentHealth) {
-        if (currentHealth > 0) {
-            health += currentHealth;
-        }
-        if (currentHealth > 100) {
+    public static void addHP(int healing) {
+        health += healing;
+        if (health >= 100) {
             health = 100;
         }
     }
