@@ -1,17 +1,26 @@
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
+/**
+ * Events-class
+ *
+ * This class contains all of the events that can occur throughout the game.
+ * As they get called on from the Movement-class, the events get printed on
+ * the screen, where the player at times get a choice on how to react.
+ *
+ * Certain choices will affect the player's health and amount of mushrooms,
+ * with some of the events having random outcomes.
+ */
 public class Events {
     private static int random;
-    private static int choice;
+    private static String choice;
 
     public static void eventBearAttack(Scanner scanner) {
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
             while (true) {
-                choice = scanner.nextInt();
-                if (choice == 1) {
+                choice = scanner.nextLine();
+                if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
                     if (random == 1) {
                         System.out.println("The bear gets scared and runs away. You get away safely.");
@@ -21,7 +30,7 @@ public class Events {
                         Player.takeDamage(30);
                     }
                     break;
-                } else if (choice == 2) {
+                } else if (choice.equals("2")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
@@ -69,8 +78,8 @@ public class Events {
             System.out.println("It could be a trap, or possibly some item of worth.\nWhat do you do?\n");
             System.out.println("1. Investigate the pile of leaves.\n2. Walk around it.");
             while (true) {
-                choice = scanner.nextInt();
-                if (choice == 1) {
+                choice = scanner.nextLine();
+                if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
@@ -83,8 +92,11 @@ public class Events {
                         Player.takeDamage(15);
                     }
                     break;
-                } else {
+                } else if (choice.equals("2")) {
                     System.out.println("You walk past the pile of leaves and nothing happens.");
+                    break;
+                } else {
+                    System.err.println("\nInvalid choice.\n\n1. Investigate the pile of leaves.\n2. Walk around it.");
                 }
             }
         } catch (Exception e) {
@@ -100,9 +112,9 @@ public class Events {
             System.out.println("What will you do?\n");
             System.out.println("1. Approach the fox.\n2. Ignore it and continue on.");
             while (true) {
-                choice = scanner.nextInt();
-                if (choice == 1) {
-                    random = ThreadLocalRandom.current().nextInt(1, 1 + 1);
+                choice = scanner.nextLine();
+                if (choice.equals("2")) {
+                    random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
                                 "You take a few steps towards the fox and kneel down. The fox walks up to you and starts sniffing around you.");
@@ -120,7 +132,7 @@ public class Events {
                         Player.addMushrooms(1);
                         break;
                     }
-                } else if (choice == 2) {
+                } else if (choice.equals("2")) {
                     System.out.println("You decide to ignore the fox and keep walking.");
                     break;
                 } else {
