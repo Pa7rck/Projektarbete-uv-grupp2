@@ -27,9 +27,4 @@ public class EventsTest {
         Events.eventDeer();
         assertEquals(100, Player.getHP());
     }
-
-    @Test
-    public void eventBearAttackTest() {
-        Events.eventBearAttack(scannerWithOne);
-    }
 }
