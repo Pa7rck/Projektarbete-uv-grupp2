@@ -1,13 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Scanner;
-
 import org.junit.jupiter.api.Test;
 
 public class EventsTest {
-    Scanner scannerWithOne = new Scanner("1\n");
-    Scanner scannerWithTwo = new Scanner("2\n");
-
     @Test
     public void eventFindMushroomTest() {
         Player.addMushrooms(1);
