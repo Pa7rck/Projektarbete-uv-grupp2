@@ -32,8 +32,9 @@ public class Player {
     }
 
     public static void takeDamage(int damage) {
-        if (health > 0) {
             health -= damage;
+        if (health < 0) {
+            health = 0;
         }
     }
 

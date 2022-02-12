@@ -14,7 +14,9 @@ public class Events {
     private static int random;
     private static String choice;
 
-    public static void eventBearAttack(Scanner scanner) {
+    //private static Movement move = new Movement();
+
+    public static void eventBearAttack(Scanner scanner, Movement move) {
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
@@ -26,16 +28,16 @@ public class Events {
                         System.out.println("The bear gets scared and runs away. You get away safely.");
                     } else {
                         System.out.println(
-                                "The bear doesn't fear you at all. It charges at you, gets a swing off and runs away.\nYou lose 30 HP.");
-                        Player.takeDamage(30);
+                                "The bear doesn't fear you at all. It charges at you, gets a swing off and runs away.\nYou lose " + 20 * move.getLevel() + " HP.");
+                        Player.takeDamage(20 * move.getLevel());
                     }
                     break;
                 } else if (choice.equals("2")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
-                                "You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose 30 HP.");
-                        Player.takeDamage(30);
+                                "You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose " + 20 * move.getLevel() + " HP.");
+                        Player.takeDamage(20 * move.getLevel());
                     } else {
                         System.out.println(
                                 "You manage to hide behind a rock, and the bear doesn't notice you. It walks away and you're once again safe.");
@@ -58,7 +60,7 @@ public class Events {
 
     public static void eventStepOnNail() {
         System.out.println("As you walk along the path, you step on an old, rusty nail. You lose 5 HP.");
-        Player.takeDamage(10);
+        Player.takeDamage(5);
     }
 
     public static void eventDeer() {
