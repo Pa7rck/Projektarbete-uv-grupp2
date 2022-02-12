@@ -10,6 +10,7 @@ public class Main {
 
 		try (BufferedReader reader = new BufferedReader(new FileReader("Prologue.txt"));
 			 Scanner scanner = new Scanner(System.in)) {
+
 			String lines;
 
 			// Prints out the prologue.
@@ -17,24 +18,22 @@ public class Main {
 				System.out.println(lines);
 			}
 
-			System.out.println();
-			System.out.println("Now, what is your name? ");
-			String userName = scanner.next();
-			Player.setName(userName);
-
 			// To make the game stop after reaching a certain level(or died).
-			while (move.getLevel() < 5) {
+			while (move.getLevel() < 4) {
 				System.out.println();
-				System.out.println("Which path do you choose?(left/right)");
-				String userChoice = scanner.next();
+				System.out.println("Which path do you choose?");
+				System.out.println("1. Take left and travel through the fog");
+				System.out.println("2. Ignore the obvious risks and head towards the road");
+				System.out.println();
+				String userChoice = scanner.nextLine();
 
-				if (userChoice.equals("left")) {
+				if (userChoice.equals("1")) {
 					move.travelLeft(scanner);
-				} else if (userChoice.equals("right")) {
+				} else if (userChoice.equals("2")) {
 					move.travelRight(scanner);
 				}
 
-				if(move.getLevel() == 5) {
+				if(move.getLevel() == 4) {
 					System.out.print("\n\n\nYou survived the forest!\n\n\n");
 					System.out.print("Credits:\n\n");
 					System.out.println("Andreas");
@@ -42,13 +41,13 @@ public class Main {
 					System.out.println("Patrick");
 				}
 
-				if(move.getLevel() < 5) {
+				if(move.getLevel() < 4) {
 					System.out.println("You're on level " + move.getLevel());
 					System.out.println("HP " + Player.getHP());
 				}
 
 				if(Player.getHP() < 1) {
-					System.out.println("You're dead");
+					System.out.println("You died");
 				}
 			}
 		} catch(FileNotFoundException ex) {
