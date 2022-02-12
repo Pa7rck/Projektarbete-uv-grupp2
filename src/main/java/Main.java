@@ -28,7 +28,7 @@ public class Main {
 				String userChoice = scanner.nextLine();
 
 				if (userChoice.equals("1")) {
-					move.travelLeft(scanner);
+					move.travelLeft(scanner, move);
 				} else if (userChoice.equals("2")) {
 					move.travelRight(scanner, move);
 				}
