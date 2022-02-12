@@ -17,7 +17,7 @@ public class Events {
     //private static Movement move = new Movement();
 
     public static void eventBearAttack(Scanner scanner, Movement move) {
-        private static int damage = 20 * move.getLevel();
+        private int damage = 20 * move.getLevel();
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
