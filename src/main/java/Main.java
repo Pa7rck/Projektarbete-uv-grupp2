@@ -30,15 +30,17 @@ public class Main {
 				if (userChoice.equals("1")) {
 					move.travelLeft(scanner);
 				} else if (userChoice.equals("2")) {
-					move.travelRight(scanner);
+					move.travelRight(scanner, move);
 				}
 
 				if(move.getLevel() == 4) {
-					System.out.print("\n\n\nYou survived the forest!\n\n\n");
-					System.out.print("Credits:\n\n");
+					System.out.printf("\n\n\nYou survived the forest with %d remaining HP\n\n\n", Player.getHP());
+					System.out.println("Credits:\n");
 					System.out.println("Andreas");
 					System.out.println("Gabriella");
 					System.out.println("Patrick");
+					System.out.println("\n\n\nPress any key to exit");
+					scanner.nextLine();
 				}
 
 				if(move.getLevel() < 4) {
@@ -47,7 +49,9 @@ public class Main {
 				}
 
 				if(Player.getHP() < 1) {
-					System.out.println("You died");
+					System.out.println("You died. Press any key to exit");
+					scanner.nextLine();
+					break;
 				}
 			}
 		} catch(FileNotFoundException ex) {
