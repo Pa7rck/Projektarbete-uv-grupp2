@@ -30,11 +30,11 @@ public class PlayerTest {
         int expected = Player.getMushroomCount();
         Player.addMushrooms(10);
         expected += 10;
-        assertEquals(10, Player.getMushroomCount());
+        assertEquals(expected, Player.getMushroomCount());
 
         Player.removeMushrooms(5);
         expected -= 5;
-        assertEquals(5, Player.getMushroomCount());
+        assertEquals(expected, Player.getMushroomCount());
     }
 }
 
