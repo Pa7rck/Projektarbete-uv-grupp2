@@ -61,7 +61,7 @@ public class Main {
 					System.out.println("You died. \nYou reached level " + move.getLevel()
 										+ "\nPress any key to exit");
 					scanner.nextLine();
-					break;
+					break started;
 				}
 			}
 		} catch(FileNotFoundException ex) {
