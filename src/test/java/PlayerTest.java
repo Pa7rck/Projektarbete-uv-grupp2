@@ -1,19 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
-/*
-    Kolla att man får ett namn
-    Kolla att man får en mushroom
-    Att den äter
-    att den tar bort en svamp
-
-    Har HP
-    Tar damage
-    Får HP
-
-
- */
 public class PlayerTest {
 
     private Player player;
@@ -23,13 +10,13 @@ public class PlayerTest {
 
 
     @Test
-    public void testName(){
+    public void nameTest(){
         Player.setName("Bolle");
         assertSame("Bolle", Player.getName());
     }
 
     @Test
-    public void testMaxHP() {
+    public void maxHPTest() {
         Player.addHP(10);
         assertEquals(100, Player.getHP());
     }
@@ -43,19 +30,12 @@ public class PlayerTest {
 
     // Mushroomiiies test
     @Test
-    public void testAddMushrooms(){
-        Player.addMushrooms(10);
-        assertEquals(10, Player.getMushroomCount());
-    }
-
-    @Test
-    public void testRemoveMushrooms(){
+    public void addAndRemoveMushroomsTest(){
         Player.addMushrooms(10);
         assertEquals(10, Player.getMushroomCount());
 
         Player.removeMushrooms(5);
         assertEquals(5, Player.getMushroomCount());
     }
-
 }
 
