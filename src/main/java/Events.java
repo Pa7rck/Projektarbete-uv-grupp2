@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Events-class
  *
@@ -14,10 +15,13 @@ public class Events {
     private static int random;
     private static String choice;
 
-    //private static Movement move = new Movement();
+    // private static Movement move = new Movement();
 
     public static void eventBearAttack(Scanner scanner, Movement move) {
         int damage = 20 * move.getLevel();
+        if (damage > 60) {
+            damage = 60;
+        }
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
             System.out.println("1. Try to scare the bear.\n2. Try to hide.");
@@ -29,7 +33,8 @@ public class Events {
                         System.out.println("The bear gets scared and runs away. You get away safely.");
                     } else {
                         System.out.println(
-                                "The bear doesn't fear you at all. It charges at you, gets a swing off and runs away.\nYou lose " + damage + " HP.");
+                                "The bear doesn't fear you at all. It charges at you, gets a swing off and runs away.\nYou lose "
+                                        + damage + " HP.");
                         Player.takeDamage(damage);
                     }
                     break;
@@ -37,7 +42,8 @@ public class Events {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
-                                "You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose " + damage + " HP.");
+                                "You try to hide behind a closeby rock, but the bear sees you. It charges you, gets a swing off and runs away.\nYou lose "
+                                        + damage + " HP.");
                         Player.takeDamage(damage);
                     } else {
                         System.out.println(
@@ -60,8 +66,8 @@ public class Events {
     }
 
     public static void eventStepOnNail() {
-        System.out.println("As you walk along the path, you step on an old, rusty nail. You lose 5 HP.");
-        Player.takeDamage(5);
+        System.out.println("As you walk along the path, you step on an old, rusty nail. You lose 15 HP.");
+        Player.takeDamage(15);
     }
 
     public static void eventDeer() {
@@ -91,8 +97,8 @@ public class Events {
                     } else {
                         System.out.println(
                                 "As you stick your hand through the leaves, you realize there's a bunch of broken glass underneath and you cut yourself.");
-                        System.out.println("You take 15 damage.");
-                        Player.takeDamage(15);
+                        System.out.println("You take 10 damage.");
+                        Player.takeDamage(10);
                     }
                     break;
                 } else if (choice.equals("2")) {
