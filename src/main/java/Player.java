@@ -40,8 +40,11 @@ public class Player {
 
     // gets health from mushroom
     public static void eatMushroom() {
-        if(mushroomCount > 0) {
-            health += 5;
+        if (getHP() == 100 && mushroomCount > 0) {
+            System.out.println("You already have full health, you don't need to eat.");
+        } else if(mushroomCount > 0) {
+            System.out.println("You eat a mushroom, healing you for 15 HP.");
+            addHP(15);
             mushroomCount--;
         }
         else {
