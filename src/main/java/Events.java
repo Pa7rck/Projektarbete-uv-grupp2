@@ -73,7 +73,7 @@ public class Events {
     public static void eventDeer() {
         System.out.println("Suddenly, a magnificent deer jumps across the path!");
         if (Player.getHP() < 100) {
-            System.out.println("The beaufy of the scene fills you with joy, healing you a little.");
+            System.out.println("The beauty of the scene fills you with joy, healing you a little.");
             Player.addHP(10);
         } else {
             System.out.println("It runs away into the forest, and nothing more happens.");
@@ -122,7 +122,7 @@ public class Events {
             System.out.println("1. Approach the fox.\n2. Ignore it and continue on.");
             while (true) {
                 choice = scanner.nextLine();
-                if (choice.equals("2")) {
+                if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
