@@ -12,7 +12,7 @@ public class EventsTest {
     @Test
     public void eventStepOnNailTest() {
         Events.eventStepOnNail();
-        assertEquals(90, Player.getHP());
+        assertEquals(85, Player.getHP());
     }
 
     @Test
