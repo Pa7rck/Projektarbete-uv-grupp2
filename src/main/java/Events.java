@@ -92,8 +92,8 @@ public class Events {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
                         System.out.println(
-                                "As you get close, you realize there's some mushrooms growing in the pile.\nYou pick them up.");
-                        Player.addMushrooms(5);
+                                "As you get close, you realize there's some mushrooms growing in the pile.\nYou pick up 3 mushrooms.");
+                        Player.addMushrooms(3);
                     } else {
                         System.out.println(
                                 "As you stick your hand through the leaves, you realize there's a bunch of broken glass underneath and you cut yourself.");
@@ -137,8 +137,8 @@ public class Events {
                         break;
                     } else {
                         System.out.println(
-                                "The fox gets scared and runs away, leaving a msuhroom behind. You decided to take it with you.");
-                        Player.addMushrooms(1);
+                                "The fox gets scared and runs away, leaving two mushrooms behind. You decided to take them with you.");
+                        Player.addMushrooms(2);
                         break;
                     }
                 } else if (choice.equals("2")) {
