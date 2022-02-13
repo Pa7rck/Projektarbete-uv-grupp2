@@ -8,7 +8,7 @@ public class GenerateEventTest {
     GenerateEvent ge = new GenerateEvent();
 
     @Test
-    public void testTurnLeft_Survive() {
+    public void generateEventLeftTest_levelIncrease() {
 
         ge.generateEventLeft(sc1, ge);
         int expected = 2;
@@ -17,7 +17,7 @@ public class GenerateEventTest {
     }
 
     @Test
-    public void testTurnRight_Survive() {
+    public void generateEventRightTest_levelIncrease() {
 
         ge.generateEventRight(sc2, ge);
         int expected = 2;
