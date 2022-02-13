@@ -1,19 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
-/*
-    Kolla att man får ett namn
-    Kolla att man får en mushroom
-    Att den äter
-    att den tar bort en svamp
-
-    Har HP
-    Tar damage
-    Får HP
-
-
- */
 public class PlayerTest {
 
     private Player player;
