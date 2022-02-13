@@ -11,11 +11,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * Certain choices will affect the player's health and amount of mushrooms,
  * with some of the events having random outcomes.
  */
+
 public class Events {
     private static int random;
     private static String choice;
-
-    // private static Movement move = new Movement();
 
     public static void eventBearAttack(Scanner scanner, GenerateEvent ge) {
         int damage = 20 * ge.getLevel();
