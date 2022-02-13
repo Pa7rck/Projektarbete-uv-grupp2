@@ -3,6 +3,8 @@
 LOST AND CONFUSED
 
 You wake up in the woods, disoriented. You don't know where you are or how you got there.
+-PlayerName, PlayerName...
+The name PlayerName occupies your thoughts, causing an uneasy feeling.
 It's gloomy and the fog is covering parts of the forest.
 You're starting to feel anxious and realize that it's probably best not to linger.
 
