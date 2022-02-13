@@ -80,7 +80,7 @@ public class Events {
         }
     }
 
-    public static void eventPitTrap(Scanner scanner) {
+    public static void eventLeafPile(Scanner scanner) {
         try {
             System.out.println(
                     "In the middle of the trail, you see a big pile of leaves, with something sticking up through them.");
