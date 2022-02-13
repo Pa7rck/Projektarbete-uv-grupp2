@@ -5,6 +5,15 @@
            increase health
            decrease health
  */
+/**
+ * Player-class
+ *
+ * This class contains player's name, HP status and inventory for the mushrooms.
+ * Player will get healing when the method "eatMushroom" is called.
+ * Player-class will collect mushrooms and remove mushrooms when player eats them.
+ * The method "getHP" will get player's current HP status to update how much HP player has.
+ * The Player-class also controls that HP does not go over 100 HP or under 0 HP.
+ */
 
 public class Player {
     private static String name;
