@@ -11,11 +11,14 @@ public class Main {
 		try (BufferedReader reader = new BufferedReader(new FileReader("Prologue.txt"));
 			 Scanner scanner = new Scanner(System.in)) {
 
+			System.out.println("Remember your name:");
+			Player.setName(scanner.nextLine());
+
 			String lines;
 
 			// Prints out the prologue.
 			while ((lines = reader.readLine()) != null) {
-				System.out.println(lines);
+				System.out.println(lines.replaceAll("PlayerName", Player.getName()));
 			}
 
 			// To make the game stop after reaching a certain level(or died).
@@ -28,7 +31,7 @@ public class Main {
 				String userChoice = scanner.nextLine();
 
 				if (userChoice.equals("1")) {
-					move.travelLeft(scanner);
+					move.travelLeft(scanner, move);
 				} else if (userChoice.equals("2")) {
 					move.travelRight(scanner, move);
 				}
