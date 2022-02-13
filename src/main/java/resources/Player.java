@@ -8,7 +8,7 @@ package resources;
            decrease health
  */
 /**
- * resources.Player-class
+ * Player-class
  *
  * This class contains player's name, HP status and inventory for the mushrooms.
  * resources.Player will get healing when the method "eatMushroom" is called.
