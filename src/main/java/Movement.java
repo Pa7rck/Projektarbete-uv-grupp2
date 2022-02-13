@@ -17,7 +17,7 @@ public class Movement {
         } else if (randomEvent > 40 && randomEvent <= 50 ) {
             Events.eventStepOnNail();
         } else if (randomEvent > 50 && randomEvent <= 70 ) {
-            Events.eventPitTrap(scanner);
+            Events.eventLeafPile(scanner);
         } else if (randomEvent > 70 && randomEvent <= 80 ) {
             Events.eventFox(scanner);
         } else if (randomEvent > 80) {
@@ -37,7 +37,7 @@ public class Movement {
         } else if (randomEvent2 > 20 && randomEvent2 <= 30 ) {
             Events.eventStepOnNail();
         } else if (randomEvent2 > 30 && randomEvent2 <= 40 ) {
-            Events.eventPitTrap(scanner);
+            Events.eventLeafPile(scanner);
         } else if (randomEvent2 > 40 && randomEvent2 <= 60 ) {
             Events.eventFox(scanner);
         } else if (randomEvent2 > 60) {
