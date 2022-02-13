@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Movement move = new Movement();
+		GenerateEvent ge = new GenerateEvent();
 		int victoryLevel = 10;
 
 		try (BufferedReader reader = new BufferedReader(new FileReader("Prologue.txt"));
@@ -25,7 +25,7 @@ public class Main {
 			// To make the game stop after reaching a certain level(or died)
 			started:while (true) {
 				System.out.println();
-				status(move);
+				status(ge);
 				System.out.println();
 				System.out.println("Which path do you choose?");
 				System.out.println("1. Take left and travel through the fog");
@@ -37,16 +37,16 @@ public class Main {
 				String userChoice = scanner.nextLine();
 
 				if (userChoice.equals("1")) {
-					move.travelLeft(scanner, move);
+					ge.generateEventLeft(scanner, ge);
 				} else if (userChoice.equals("2")) {
-					move.travelRight(scanner, move);
+					ge.generateEventRight(scanner, ge);
 				} else if (userChoice.equals("3") && Player.getMushroomCount() > 0) {
 					Player.eatMushroom();
 				} else {
-					System.out.println("That is not a path, choose another one");
+					System.err.println("That is not a path, choose another one");
 				}
 
-				if(move.getLevel() == victoryLevel && Player.getHP() > 0) {
+				if(ge.getLevel() == victoryLevel && Player.getHP() > 0) {
 					System.out.printf("\n\n\nYou survived the forest with %d remaining HP\n\n\n", Player.getHP());
 					System.out.println("Credits:\n");
 					System.out.println("Andreas");
@@ -58,7 +58,7 @@ public class Main {
 				}
 
 				if(Player.getHP() < 1) {
-					System.out.println("You died. \nYou reached level " + move.getLevel()
+					System.out.println("\nYou died. \nYou reached level " + ge.getLevel()
 										+ "\nPress any key to exit");
 					scanner.nextLine();
 					break started;
@@ -69,8 +69,8 @@ public class Main {
 		}
 	}
 
-	private static void status(Movement move) {
-		System.out.println("You're on level " + move.getLevel());
+	private static void status(GenerateEvent ge) {
+		System.out.println("You're on level " + ge.getLevel());
 		System.out.println("HP " + Player.getHP());
 	}
 }

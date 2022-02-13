@@ -17,8 +17,8 @@ public class Events {
 
     // private static Movement move = new Movement();
 
-    public static void eventBearAttack(Scanner scanner, Movement move) {
-        int damage = 20 * move.getLevel();
+    public static void eventBearAttack(Scanner scanner, GenerateEvent ge) {
+        int damage = 20 * ge.getLevel();
         if (damage > 60) {
             damage = 60;
         }
