@@ -17,8 +17,8 @@ public class Events {
 
     // private static Movement move = new Movement();
 
-    public static void eventBearAttack(Scanner scanner, Movement move) {
-        int damage = 20 * move.getLevel();
+    public static void eventBearAttack(Scanner scanner, GenerateEvent ge) {
+        int damage = 20 * ge.getLevel();
         if (damage > 60) {
             damage = 60;
         }
@@ -80,7 +80,7 @@ public class Events {
         }
     }
 
-    public static void eventPitTrap(Scanner scanner) {
+    public static void eventLeafPile(Scanner scanner) {
         try {
             System.out.println(
                     "In the middle of the trail, you see a big pile of leaves, with something sticking up through them.");
