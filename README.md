@@ -19,9 +19,10 @@ Djur, händelser, föremål på vägen.
 
 
 
-Rörelse-klass - Patrick
+GenerateEvent-klass - Patrick
 
-Ta steg, slumpad schans att något händer, kallar på event-klassen.
+Slumpad chans att något händer, kallar på event-klassen.
+Ökar level.
 
 
 Main
