@@ -1,6 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import resources.Events;
+import resources.Player;
 
 public class EventsTest {
     @Test

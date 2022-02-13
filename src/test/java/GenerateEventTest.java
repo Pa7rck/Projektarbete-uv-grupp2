@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import utilities.GenerateEvent;
+
 import java.util.Scanner;
 import static org.junit.jupiter.api.Assertions.*;
 

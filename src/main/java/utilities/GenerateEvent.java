@@ -1,10 +1,13 @@
+package utilities;
+
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+import resources.Events;
 
 /**
  * A class that provides methods that generates a random number between 1 and 100.
  * That number is then being used inside the methods to determine which event to call
- * from the Events class. The class also makes sure that the player level increases
+ * from the resources.Events class. The class also makes sure that the player level increases
  * after each stage of the game.
  */
 

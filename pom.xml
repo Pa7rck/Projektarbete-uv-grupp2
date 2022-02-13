@@ -32,8 +32,8 @@
           <archive>
             <manifest>
               <mainClass>
-                		Main
-                	</mainClass>
+                main.Main
+              </mainClass>
             </manifest>
           </archive>
         </configuration>

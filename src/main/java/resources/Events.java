@@ -1,8 +1,12 @@
+package resources;
+
+import utilities.GenerateEvent;
+
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Events-class
+ * resources.Events-class
  *
  * This class contains all of the events that can occur throughout the game.
  * As they get called on from the Movement-class, the events get printed on
