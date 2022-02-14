@@ -21,6 +21,7 @@ public class GenerateEvent {
         this.randomEvent = ThreadLocalRandom.current().nextInt(1, 100 + 1);
         if (randomEvent >= 35 && randomEvent <= 45 || randomEvent >= 65 && randomEvent <= 75 || randomEvent >= 95) {
             Events.eventFindMushroom();
+            System.out.println();
         }
         if (randomEvent <= 40) {
             Events.eventDeer();
@@ -41,6 +42,7 @@ public class GenerateEvent {
         this.randomEvent2 = ThreadLocalRandom.current().nextInt(1, 100 + 1);
         if (randomEvent2 >= 37 && randomEvent2 <= 47 || randomEvent2 >= 67 && randomEvent2 <= 77 || randomEvent2 >= 80) {
             Events.eventFindMushroom();
+            System.out.println();
         }
         if (randomEvent2 <= 20) {
             Events.eventDeer();

@@ -27,9 +27,10 @@ public class Events {
         }
         try {
             System.out.println("A bear appears from behind a tree, making its way towards you.\nWhat do you do?\n");
-            System.out.println("1. Try to scare the bear.\n2. Try to hide.");
+            System.out.println("1. Try to scare the bear.\n2. Try to hide.\n");
             while (true) {
                 choice = scanner.nextLine();
+                System.out.println();
                 if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 4 + 1);
                     if (random == 1) {
@@ -88,9 +89,10 @@ public class Events {
             System.out.println(
                     "In the middle of the trail, you see a big pile of leaves, with something sticking up through them.");
             System.out.println("It could be a trap, or possibly some item of worth.\nWhat do you do?\n");
-            System.out.println("1. Investigate the pile of leaves.\n2. Walk around it.");
+            System.out.println("1. Investigate the pile of leaves.\n2. Walk around it.\n");
             while (true) {
                 choice = scanner.nextLine();
+                System.out.println();
                 if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {
@@ -122,9 +124,10 @@ public class Events {
             System.out.println("Walking along the trail, you see a fox looking at you curiously.");
             System.out.println("It seems hesitant, but maybe you can approach it.");
             System.out.println("What will you do?\n");
-            System.out.println("1. Approach the fox.\n2. Ignore it and continue on.");
+            System.out.println("1. Approach the fox.\n2. Ignore it and continue on.\n");
             while (true) {
                 choice = scanner.nextLine();
+                System.out.println();
                 if (choice.equals("1")) {
                     random = ThreadLocalRandom.current().nextInt(1, 2 + 1);
                     if (random == 1) {

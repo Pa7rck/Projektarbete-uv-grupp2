@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+
 import utilities.GenerateEvent;
 import resources.Player;
 
@@ -14,7 +15,7 @@ public class Main {
 		int victoryLevel = 10;
 
 		try (BufferedReader reader = new BufferedReader(new FileReader("Prologue.txt"));
-			 Scanner scanner = new Scanner(System.in)) {
+				Scanner scanner = new Scanner(System.in)) {
 
 			System.out.println("Remember your name:");
 			Player.setName(scanner.nextLine());
@@ -27,7 +28,7 @@ public class Main {
 			}
 
 			// To make the game stop after reaching a certain level(or died)
-			started:while (true) {
+			started: while (true) {
 				System.out.println();
 				status(ge);
 				System.out.println();
@@ -39,7 +40,11 @@ public class Main {
 				}
 				System.out.println();
 				String userChoice = scanner.nextLine();
+				System.out.println();
 
+				if (userChoice.equals("k")) {
+					Player.takeDamage(200);
+				}
 				if (userChoice.equals("1")) {
 					ge.generateEventLeft(scanner, ge);
 				} else if (userChoice.equals("2")) {
@@ -50,31 +55,32 @@ public class Main {
 					System.err.println("That is not a path, choose another one");
 				}
 
-				if(ge.getLevel() == victoryLevel && Player.getHP() > 0) {
-					System.out.printf("\n\n\nYou survived the forest with %d remaining HP\n\n\n", Player.getHP());
+				if (ge.getLevel() == victoryLevel && Player.getHP() > 0) {
+					System.out.printf("\n\n\nCongratulations, %s!\nYou survived the forest with %d remaining HP!\n\n\n",
+							Player.getName(), Player.getHP());
 					System.out.println("Credits:\n");
 					System.out.println("Andreas");
 					System.out.println("Gabriella");
 					System.out.println("Patrick");
-					System.out.println("\n\n\nPress any key to exit");
+					System.out.println("\n\nPress any key to exit");
 					scanner.nextLine();
 					break started;
 				}
 
-				if(Player.getHP() < 1) {
-					System.out.println("\nYou died. \nYou reached level " + ge.getLevel()
-										+ "\nPress any key to exit");
+				if (Player.getHP() < 1) {
+					System.out.println("\nYou died.\n\nYou reached level " + ge.getLevel()
+							+ "\n\nPress any key to exit");
 					scanner.nextLine();
 					break started;
 				}
 			}
-		} catch(FileNotFoundException ex) {
+		} catch (FileNotFoundException ex) {
 			System.err.println("The file does not exist");
 		}
 	}
 
 	private static void status(GenerateEvent ge) {
-		System.out.println("You're on level " + ge.getLevel());
-		System.out.println("HP " + Player.getHP());
+		System.out.printf("-----------------------------------Level %02d - %d HP-----------------------------------\n",
+				ge.getLevel(), Player.getHP());
 	}
 }

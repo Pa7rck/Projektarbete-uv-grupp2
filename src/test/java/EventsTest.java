@@ -13,12 +13,14 @@ public class EventsTest {
 
     @Test
     public void eventStepOnNailTest() {
+        Player.addHP(100);
         Events.eventStepOnNail();
         assertEquals(85, Player.getHP());
     }
 
     @Test
     public void eventDeerTest() {
+        Player.addHP(100);
         Player.takeDamage(10);
         assertEquals(90, Player.getHP());
         Events.eventDeer();
