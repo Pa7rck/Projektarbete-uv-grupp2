@@ -1,10 +1,3 @@
-
-
-
-
-Text-baserat äventyr, man följer en stig i skogen och ska hitta sin väg ut. Rör sig i steg, slumpade event kan hända på vägen.
-
-
 ## Plot 
 Text-based adventure game where you will wake up in the middle in the forest and you have to find a way out. However there may be events in the way. 
 
