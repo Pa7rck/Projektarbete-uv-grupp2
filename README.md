@@ -1,28 +1,32 @@
+
+
+
+
 Text-baserat äventyr, man följer en stig i skogen och ska hitta sin väg ut. Rör sig i steg, slumpade event kan hända på vägen.
 
 
+## Plot 
+Text-based adventure game where you will wake up in the middle in the forest and you have to find a way out. However there may be events in the way. 
 
 
 
 
-Spelare-klass - Gabbi
-
-Kan ta skada, ha en ryggsäck man kan spara föremål i(?)
 
 
 
 
-Event-klass - Andreas
-
-Djur, händelser, föremål på vägen.
-
-
+## Tasks
+Player class - Gabriella 
+Takes damage, heals and have a inventory.
 
 
-GenerateEvent-klass - Patrick
+Event class - Andreas
+Events for animals, objects on the way. 
 
-Slumpad chans att något händer, kallar på event-klassen.
-Ökar level.
+
+GenerateEvent class - Patrick
+Generating events, calling the Event class. Increase level.
+
 
 
 main
