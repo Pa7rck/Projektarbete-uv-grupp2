@@ -1,3 +1,7 @@
+package resources;
+
+import utilities.GenerateEvent;
+
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
