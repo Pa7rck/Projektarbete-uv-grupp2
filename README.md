@@ -4,8 +4,8 @@
 
 ### Windows:
 
-1. Download the **ZIP-file**.
-2. Extract the **ZIP-file** at your desired destination.
+1. Download the [ZIP-file](https://github.com/Pa7rck/Projektarbete-uv-grupp2.git).
+2. Extract the [ZIP-file](https://github.com/Pa7rck/Projektarbete-uv-grupp2.git) at your desired destination.
 3. Enter the extracted folder and double click on **App.bat** to run the game.
 
 ### Linux:
