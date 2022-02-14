@@ -11,8 +11,8 @@
 ### Linux:
 
 1. Copy the HTTPS link from the GitHub-page.
-2. In the terminal, write **"git clone '*the link*'"**. 
-3. Enter the new folder with **"cd *directory name/*".**
+2. In the terminal, write **"git clone '*the-link*'"**. 
+3. Enter the new folder with **"cd *directory-name/*".**
 4. Write **"chmod a+x App.sh"** in the terminal.
 5. Write **"./App.sh"** in the terminal to run the game.
 
