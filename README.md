@@ -4,8 +4,8 @@
 
 ### Windows:
 
-1. Download the [ZIP-file](/Pa7rck/Projektarbete-uv-grupp2/archive/refs/heads/main.zip).
-2. Extract the [ZIP-file](/Pa7rck/Projektarbete-uv-grupp2/archive/refs/heads/main.zip) at your desired destination.
+1. Download the **ZIP-file**.
+2. Extract the **ZIP-file** at your desired destination.
 3. Enter the extracted folder and double click on **App.bat** to run the game.
 
 ### Linux:
